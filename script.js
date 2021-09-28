@@ -4,10 +4,10 @@ function main() {
   let maxAge = 78.7;
   let weeksLeft = (maxAge - age) * 52;
 
-  let html = `<div>`;
+  let html = `<h1>`;
   html += weeksLeft;
-  html += ` weeks`;
-  html += `</div>`;
+  html += ` weeks left`;
+  html += `</h1>`;
 
   let content = document.getElementById("content");
   content.innerHTML = html;
