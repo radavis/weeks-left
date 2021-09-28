@@ -13,8 +13,34 @@
 
     <link rel="icon" href="favicon.ico">
   </head>
+
   <body>
+    <aside>
+      <form name="userDetails">
+        <label class="dislpay:block">
+          Birthdate
+          <input 
+            type="text" 
+            name="birthdate"
+            value="1980/03/30"
+          />
+        </label>
+        <label class="display:block">
+          Life Expectancy in Years
+          <input 
+            type="number" 
+            name="lifeExpectancyInYears" 
+            min="0" 
+            max="125"
+            step="0.1"
+            value="78.0"  
+          />
+        </label>
+      </form>
+    </aside>
+    
     <article id="content"></article>
+    
     <script src="script.js"></script>
   </body>
 </html>

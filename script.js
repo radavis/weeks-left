@@ -12,13 +12,16 @@ const weeksLeft = (birthdate, expectedLifetimeInYears) => {
   let milliseconds = lifeLeftInMilliSeconds % MILLISECONDS_PER_WEEK;
   let fractionalWeeks = Math.pow(10, SIGNIFICANT_DIGITS) * milliseconds / MILLISECONDS_PER_WEEK;
   fractionalWeeks = Math.floor(fractionalWeeks);
+  fractionalWeeks = Math.abs(fractionalWeeks);
 
   return [wholeWeeks, fractionalWeeks];
 }
 
 const updateContent = () => {
   // https://www.lifeexpectancy.org/asp/Calculator/default.asp
-  let [wholeWeeks, fractionalWeeks] = weeksLeft("1981-03-31", 78.7);
+  let birthdate = document.userDetails.birthdate.value;
+  let expectedLifetimeInYears = document.userDetails.lifeExpectancyInYears.value;
+  let [wholeWeeks, fractionalWeeks] = weeksLeft(birthdate, expectedLifetimeInYears);
 
   let html = `<h1>`;
   html += `You Have `;

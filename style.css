@@ -28,3 +28,7 @@ h1 {
 .small-text {
   font-size: 2rem;
 }
+
+.display\:block {
+  display: block !important;
+}
