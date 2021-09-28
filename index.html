@@ -7,29 +7,27 @@
     <title>Weeks Left</title>
 
     <link rel="icon" href="favicon.ico">
-    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
-    <link
-      rel="stylesheet"
-      href="//fonts.googleapis.com/css2?family=Lato&family=Courier+Prime&display=swap">
-
-    <style>
-      html {
-        font-family: "Lato", serif;
-      }
-
-      code, pre {
-        font-family: "Courier Prime", monospace;
-      }
-    </style>
-
-    <!-- load an external stylesheet -->
     <link href="style.css" rel="stylesheet">
   </head>
   <body>
+    <article id="main"></article>
+
     <script>
       function main() {
-        console.log("DOM has loaded...");
+        // https://www.lifeexpectancy.org/asp/Calculator/default.asp
+        let age = 40.5;
+        let maxAge = 78.7;
+        let weeksLeft = (maxAge - age) * 52;
+
+        let content = `<div>`;
+        content += weeksLeft;
+        content += ` weeks`;
+        content += `</div>`;
+
+        let main = document.getElementById("main");
+        main.innerHTML = content;        
       }
+      
       document.addEventListener("DOMContentLoaded", main);
     </script>
 

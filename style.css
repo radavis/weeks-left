@@ -1,4 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?Gemunu+Libre&display=swap");
+
 body {
+  font-family: 'Gemunu Libre', sans-serif;
   background: url("geldingadalir-volcano-toby-elliott-unsplash-photo-1628033892645-25983849cdaa.webp") no-repeat center center fixed;
   background-size: cover;
+}
+
+article#main {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  font-size: 4rem;
+  text-shadow: 4px 4px 0px black;
+}
+
+span {
+  margin: 0 1ex;
 }
