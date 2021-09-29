@@ -10,36 +10,56 @@
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 
     <link href="style.css" rel="stylesheet">
+    <link href="micromodal.css" rel="stylesheet">
 
     <link rel="icon" href="favicon.ico">
   </head>
 
   <body>
-    <aside>
-      <form name="userDetails">
-        <label class="dislpay:block">
-          Birthdate
-          <input 
-            type="text" 
-            name="birthdate"
-          />
-        </label>
-        <label class="display:block">
-          Life Expectancy in Years
-          <input 
-            type="number" 
-            name="lifeExpectancyInYears" 
-            min="0" 
-            max="125"
-            step="0.1"
-          />
-        </label>
-        <input type="submit" value="Update">
-      </form>
-    </aside>
-    
+    <img src="keyboard-svgrepo-com.svg" alt="keyboard icon" id="keyboard-icon" data-custom-open="modal-1" />
     <article id="content"></article>
-    
+
+    <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title" >
+          <header class="modal__header">
+            <h2 class="modal__title" id="modal-1-title">
+              Modal Title
+            </h2>
+            <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+          </header>
+          <div class="modal__content" id="modal-1-content">
+            Modal Content
+            <form name="userDetails">
+              <label class="dislpay:block">
+                Birthdate
+                <input
+                  type="text"
+                  name="birthdate"
+                />
+              </label>
+              <label class="display:block">
+                Life Expectancy in Years
+                <input
+                  type="number"
+                  name="lifeExpectancyInYears"
+                  min="0"
+                  max="125"
+                  step="0.1"
+                />
+              </label>
+              <input type="submit" value="Update">
+            </form>
+          </div>
+          <footer class="modal__footer">
+            <button class="modal__btn modal__btn-primary">Continue</button>
+            <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

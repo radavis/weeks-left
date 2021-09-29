@@ -17,10 +17,12 @@ const weeksLeft = (birthdate, expectedLifetimeInYears) => {
 }
 
 const updateContent = () => {
+  // read from input
   let birthdate = document.userDetails.birthdate.value;
   let expectedLifetimeInYears = document.userDetails.lifeExpectancyInYears.value;
   let [wholeWeeks, fractionalWeeks] = weeksLeft(birthdate, expectedLifetimeInYears);
 
+  // write to page
   let html = `<h1>`;
   html += `You Have `;
   html += `${wholeWeeks}.`;
@@ -35,14 +37,13 @@ const updateContent = () => {
 const initializeUserDetailsForm = () => {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
-  console.log({ urlParams });
-  document.userDetails.birthdate.value = urlParams.get("birthdate") || "1980/03/30"
-  document.userDetails.lifeExpectancyInYears.value = urlParams.get("lifeExpectancyInYears")  || 78.0
+  document.userDetails.birthdate.value = urlParams.get("birthdate") || "1980/03/30";
+  document.userDetails.lifeExpectancyInYears.value = urlParams.get("lifeExpectancyInYears") || 78.0;
 }
 
 const main = () => {
   initializeUserDetailsForm();
-  setInterval(updateContent, 100);
+  setInterval(updateContent, 100); // run loop
 }
 
 document.addEventListener("DOMContentLoaded", main);
