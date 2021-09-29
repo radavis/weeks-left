@@ -6,9 +6,8 @@
 * modal/sidebar for birthdate and expected lifetime
   - add input fields to index.html for birthdate and expected lifetime
   - call `weeksLeft()` with values from form
-* set birthdate, expectedLifetimeInDays to `localStorage` on input field exit event 
-* retrieve birthdate, expectedLifetimeInDays from `localStorage` on `DOMContentLoaded` event
-
+  - set birthdate, expectedLifetimeInDays to URL on form submission
+  - retrieve birthdate, expectedLifetimeInDays from URL on `DOMContentLoaded` event
 
 
 ## what are the ideas that arise when creating this?

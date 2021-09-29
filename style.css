@@ -32,3 +32,11 @@ h1 {
 .display\:block {
   display: block !important;
 }
+
+input[type=text] {
+  width: 8em;
+}
+
+input[type=number] {
+  width: 5em;
+}

@@ -11,14 +11,12 @@ const weeksLeft = (birthdate, expectedLifetimeInYears) => {
   let wholeWeeks = Math.floor(lifeLeftInMilliSeconds / MILLISECONDS_PER_WEEK);
   let milliseconds = lifeLeftInMilliSeconds % MILLISECONDS_PER_WEEK;
   let fractionalWeeks = Math.pow(10, SIGNIFICANT_DIGITS) * milliseconds / MILLISECONDS_PER_WEEK;
-  fractionalWeeks = Math.floor(fractionalWeeks);
-  fractionalWeeks = Math.abs(fractionalWeeks);
+  fractionalWeeks = Math.abs(Math.floor(fractionalWeeks));
 
   return [wholeWeeks, fractionalWeeks];
 }
 
 const updateContent = () => {
-  // https://www.lifeexpectancy.org/asp/Calculator/default.asp
   let birthdate = document.userDetails.birthdate.value;
   let expectedLifetimeInYears = document.userDetails.lifeExpectancyInYears.value;
   let [wholeWeeks, fractionalWeeks] = weeksLeft(birthdate, expectedLifetimeInYears);
@@ -34,7 +32,16 @@ const updateContent = () => {
   content.innerHTML = html;
 }
 
+const initializeUserDetailsForm = () => {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  console.log({ urlParams });
+  document.userDetails.birthdate.value = urlParams.get("birthdate") || "1980/03/30"
+  document.userDetails.lifeExpectancyInYears.value = urlParams.get("lifeExpectancyInYears")  || 78.0
+}
+
 const main = () => {
+  initializeUserDetailsForm();
   setInterval(updateContent, 100);
 }
 
