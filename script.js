@@ -34,15 +34,25 @@ const updateContent = () => {
   content.innerHTML = html;
 }
 
-const initializeUserDetailsForm = () => {
+const initializeFromURL = () => {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
+
+  // update userDetails form fields
   document.userDetails.birthdate.value = urlParams.get("birthdate") || "1980/03/30";
   document.userDetails.lifeExpectancyInYears.value = urlParams.get("lifeExpectancyInYears") || 78.0;
+
+  // aside + userDetails visible?
+  const showAside = urlParams.get("showAside");
+  if (showAside == "false") {
+    let el = document.querySelector("aside");
+    el.style.display = "none";
+    // el.style.visibility = "hidden";
+  }
 }
 
 const main = () => {
-  initializeUserDetailsForm();
+  initializeFromURL();
   setInterval(updateContent, 100); // run loop
 }
 

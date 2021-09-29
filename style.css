@@ -40,3 +40,10 @@ input[type=text] {
 input[type=number] {
   width: 5em;
 }
+
+aside form[name=userDetails] {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

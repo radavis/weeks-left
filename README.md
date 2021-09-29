@@ -8,6 +8,7 @@
   - call `weeksLeft()` with values from form
   - set birthdate, expectedLifetimeInDays to URL on form submission
   - retrieve birthdate, expectedLifetimeInDays from URL on `DOMContentLoaded` event
+* add button/link to hide `aside` page element
 
 
 ## what are the ideas that arise when creating this?
