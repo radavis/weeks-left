@@ -29,10 +29,6 @@ h1 {
   font-size: 2rem;
 }
 
-.display\:block {
-  display: block !important;
-}
-
 input[type=text] {
   width: 8em;
 }
