@@ -1,0 +1,15 @@
+{
+  "name": "weeks-left",
+  "author": "radavis <rdavis.bacs@gmail.com> (https://linktr.ee/radavis)",
+  "license": "MIT",
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "devDependencies": {
+    "@parcel/transformer-image": "2.0.0-rc.0",
+    "parcel": "^2.0.0-rc.0"
+  }
+}

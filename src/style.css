@@ -1,7 +1,7 @@
 body {
   font-family: 'Share Tech Mono', monospace;
 
-  background: url("geldingadalir-volcano-toby-elliott-unsplash-photo-1628033892645-25983849cdaa.webp") no-repeat center center fixed;
+  background: url("images/geldingadalir-volcano-toby-elliott-unsplash-photo-1628033892645-25983849cdaa.webp") no-repeat center center fixed;
   background-size: cover;
 
   overflow-y: hidden;
@@ -19,7 +19,7 @@ article {
 
 h1 {
   color: white;
-  font-size: 4rem;
+  font-size: 4.5rem;
   text-shadow: 0.1em 0.1em 0 black;
 
   margin: 0 1em;
