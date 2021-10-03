@@ -1,5 +1,5 @@
 const DAYS_PER_YEAR = 365.25;
-const MILLISECONDS_PER_WEEK = 1000 * 60 * 60 * 24 * 7;
+const MILLISECONDS_PER_WEEK = 604_800_000; // 1000 * 60 * 60 * 24 * 7
 const SIGNIFICANT_DIGITS = 6;
 
 /**
@@ -11,7 +11,7 @@ const SIGNIFICANT_DIGITS = 6;
  *   the calculated death date
  *
  * @example
- *   getWeeksLeft((new Date()).toISOString(), 76.7) => ["4002", "096429"]
+ *   getWeeksLeft((new Date()).toISOString(), 76.7) => ["4002", "000000"]
 */
 export function getWeeksLeft(birthdate, expectedLifetimeInYears) {
   // add days to date
@@ -33,6 +33,6 @@ export function getWeeksLeft(birthdate, expectedLifetimeInYears) {
 
   return [
     `${wholeWeeks}`,
-    `${fractionalWeeks}`.padStart(SIGNIFICANT_DIGITS, '0')
+    `${fractionalWeeks}`.padStart(SIGNIFICANT_DIGITS, "0")
   ];
 }
