@@ -9,40 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 
-    <link href="style.css" rel="stylesheet">
-
     <link rel="icon" href="images/favicon.ico">
   </head>
 
   <body>
-    <aside>
-      <form name="userDetails">
-        <a href="https://unsplash.com/photos/CaVBkPUSwM4">Photo Source</a>
-        <a href="https://web.archive.org/web/20210927135800/https://www.theatlantic.com/family/archive/2021/08/oliver-burkeman-advice-time-productivity/619723/">4000 Weeks</a>
-        <label>
-          Birthdate
-          <input
-            type="text"
-            name="birthdate"
-          />
-        </label>
-        <label>
-          Life Expectancy in Years
-          <input
-            type="number"
-            name="lifeExpectancyInYears"
-            min="0"
-            max="125"
-            step="0.1"
-          />
-        </label>
-        <input type="hidden" name="showAside" value="false">
-        <input type="submit" value="Update">
-      </form>
-    </aside>
-
-    <article id="content"></article>
-
-    <script src="script.js"></script>
+    <div id="app"></div>
+    <script type="module" src="index.js"></script>
   </body>
 </html>

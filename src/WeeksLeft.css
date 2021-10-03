@@ -1,0 +1,19 @@
+article.weeksLeft {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+article.weeksLeft > h1 {
+  color: white;
+  font-size: 4.5rem;
+  text-shadow: 0.1em 0.1em 0 black;
+
+  margin: 0 1em;
+}
+
+article.weeksLeft span.small-text {
+  font-size: 2rem;
+}
