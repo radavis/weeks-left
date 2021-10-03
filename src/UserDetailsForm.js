@@ -1,7 +1,12 @@
-import React from "react"
-import "./UserDetailsForm.css"
+import React from "react";
+import "./UserDetailsForm.css";
 
-export function UserDetailsForm({ birthdate, setBirthdate, lifeExpectancy, setLifeExpectancy}) {
+export function UserDetailsForm({
+  birthdate,
+  setBirthdate,
+  lifeExpectancy,
+  setLifeExpectancy,
+}) {
   return (
     <form name="userDetails">
       <label>
@@ -10,7 +15,7 @@ export function UserDetailsForm({ birthdate, setBirthdate, lifeExpectancy, setLi
           type="text"
           name="birthdate"
           value={birthdate}
-          onChange={e => setBirthdate(e.target.value)}
+          onChange={(e) => setBirthdate(e.target.value)}
         />
       </label>
       <label>
@@ -22,11 +27,11 @@ export function UserDetailsForm({ birthdate, setBirthdate, lifeExpectancy, setLi
           max="125"
           step="0.1"
           value={lifeExpectancy}
-          onChange={e => setLifeExpectancy(e.target.value)}
+          onChange={(e) => setLifeExpectancy(e.target.value)}
         />
       </label>
       <input type="hidden" name="showAside" value="false" />
       <input type="submit" value="Update" />
     </form>
-  )
+  );
 }

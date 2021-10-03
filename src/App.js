@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
 import { Aside } from "./Aside";
 import { WeeksLeft } from "./WeeksLeft";
 import "./App.css";
@@ -16,13 +16,13 @@ export function App() {
     birthdate,
     setBirthdate,
     lifeExpectancy,
-    setLifeExpectancy
-  }
+    setLifeExpectancy,
+  };
 
   return (
     <React.Fragment>
       {showAside && <Aside {...props} />}
       <WeeksLeft {...props} />
     </React.Fragment>
-  )
+  );
 }

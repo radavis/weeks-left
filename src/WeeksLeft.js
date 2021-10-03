@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react";
 import { getWeeksLeft } from "./getWeeksLeft";
-import "./WeeksLeft.css"
+import "./WeeksLeft.css";
 
 export function WeeksLeft({ birthdate, lifeExpectancy }) {
-
   const [wholeWeeks, setWholeWeeks] = useState("0");
   const [fractionalWeeks, setFractionalWeeks] = useState("0");
 
@@ -15,7 +14,7 @@ export function WeeksLeft({ birthdate, lifeExpectancy }) {
       setFractionalWeeks(fWeeks);
     }, 100);
     return () => clearInterval(interval);
-  }, [])
+  }, []);
 
   return (
     <article className="weeksLeft">
@@ -24,5 +23,5 @@ export function WeeksLeft({ birthdate, lifeExpectancy }) {
         <span className="small-text">{fractionalWeeks}</span> Weeks Left
       </h1>
     </article>
-  )
+  );
 }

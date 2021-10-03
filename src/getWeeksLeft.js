@@ -12,7 +12,7 @@ const SIGNIFICANT_DIGITS = 6;
  *
  * @example
  *   getWeeksLeft((new Date()).toISOString(), 76.7) => ["4002", "000000"]
-*/
+ */
 export function getWeeksLeft(birthdate, expectedLifetimeInYears) {
   // add days to date
   // https://github.com/you-dont-need/You-Dont-Need-Momentjs#add
@@ -27,12 +27,13 @@ export function getWeeksLeft(birthdate, expectedLifetimeInYears) {
 
   let wholeWeeks = Math.floor(lifeLeftInMilliSeconds / MILLISECONDS_PER_WEEK);
   let remainderMilliSeconds = lifeLeftInMilliSeconds % MILLISECONDS_PER_WEEK;
-  let fractionalWeeks = Math.pow(10, SIGNIFICANT_DIGITS) *
-    remainderMilliSeconds / MILLISECONDS_PER_WEEK;
+  let fractionalWeeks =
+    (Math.pow(10, SIGNIFICANT_DIGITS) * remainderMilliSeconds) /
+    MILLISECONDS_PER_WEEK;
   fractionalWeeks = Math.abs(Math.floor(fractionalWeeks));
 
   return [
     `${wholeWeeks}`,
-    `${fractionalWeeks}`.padStart(SIGNIFICANT_DIGITS, "0")
+    `${fractionalWeeks}`.padStart(SIGNIFICANT_DIGITS, "0"),
   ];
 }
