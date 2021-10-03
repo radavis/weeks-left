@@ -1,0 +1,52 @@
+form[name="userDetails"] input {
+  margin: 0 1em;
+}
+
+form[name="userDetails"] input[type="text"] {
+  width: 8em;
+}
+
+form[name="userDetails"] input[type="number"] {
+  width: 5em;
+}
+
+aside {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+article.weeksLeft {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+article.weeksLeft > h1 {
+  color: white;
+  font-size: 4.5rem;
+  text-shadow: 0.1em 0.1em 0 black;
+
+  margin: 0 1em;
+}
+
+article.weeksLeft span.small-text {
+  font-size: 2rem;
+}
+
+body {
+  font-family: "Share Tech Mono", monospace;
+
+  background: url("geldingadalir-volcano-toby-elliott-unsplash-photo-1628033892645-25983849cdaa.94288c6d.webp")
+    no-repeat center center fixed;
+  background-size: cover;
+
+  overflow-y: hidden;
+
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=index.7c28c0e2.css.map */
