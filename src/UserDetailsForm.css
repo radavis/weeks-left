@@ -1,0 +1,11 @@
+form[name="userDetails"] input {
+  margin: 0 1em;
+}
+
+form[name="userDetails"] input[type="text"] {
+  width: 8em;
+}
+
+form[name="userDetails"] input[type="number"] {
+  width: 5em;
+}

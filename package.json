@@ -1,0 +1,31 @@
+{
+  "name": "weeks-left",
+  "author": "radavis <rdavis.bacs@gmail.com> (https://linktr.ee/radavis)",
+  "license": "MIT",
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build",
+    "test": "jest --watch",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.15.6",
+    "@parcel/transformer-image": "2.0.0-rc.0",
+    "babel-jest": "^27.2.4",
+    "husky": "^7.0.2",
+    "jest": "^27.2.4",
+    "lint-staged": "^11.1.2",
+    "parcel": "^2.0.0-rc.0",
+    "prettier": "^2.4.1"
+  },
+  "dependencies": {
+    "@babel/core": "^7.15.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  }
+}
