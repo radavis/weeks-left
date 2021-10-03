@@ -9,7 +9,7 @@ export function App() {
 
   const initialBirthdate = urlParams.get("birthdate") || "1980/03/30";
   const [birthdate, setBirthdate] = useState(initialBirthdate);
-  const initialLifeExpectancy = urlParams.get("lifeExpectancy") || 72.6;
+  const initialLifeExpectancy = urlParams.get("lifeExpectancy") || 78.0;
   const [lifeExpectancy, setLifeExpectancy] = useState(initialLifeExpectancy);
 
   let props = {
