@@ -22,7 +22,7 @@ export function UserDetailsForm({
         Life Expectancy in Years
         <input
           type="number"
-          name="lifeExpectancyInYears"
+          name="lifeExpectancy"
           min="0"
           max="125"
           step="0.1"
