@@ -1,5 +1,5 @@
 const DAYS_PER_YEAR = 365.25;
-const MILLISECONDS_PER_WEEK = 1000 * 60 * 60 * 24 * 7;
+const MILLISECONDS_PER_WEEK = 604_800_000; // 1000 * 60 * 60 * 24 * 7
 const SIGNIFICANT_DIGITS = 6;
 
 /**
@@ -31,7 +31,10 @@ const weeksLeft = (birthdate, expectedLifetimeInYears) => {
     remainderMilliSeconds / MILLISECONDS_PER_WEEK;
   fractionalWeeks = Math.abs(Math.floor(fractionalWeeks));
 
-  return [wholeWeeks, fractionalWeeks];
+  return [
+    `${wholeWeeks}`,
+    `${fractionalWeeks}`.padStart(SIGNIFICANT_DIGITS, "0")
+  ];
 }
 
 const updateContent = () => {
