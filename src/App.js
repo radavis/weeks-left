@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Aside } from "./Aside";
 import { WeeksLeft } from "./WeeksLeft";
-import "./App.css";
 
 export function App() {
   const urlParams = new URLSearchParams(window.location.search);
