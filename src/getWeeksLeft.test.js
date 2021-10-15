@@ -11,7 +11,7 @@ describe("getWeeksLeft()", () => {
     expect(getWeeksLeft(now(), 76.7)).toStrictEqual(["4002", "000000"]);
   });
 
-  test("expectedLifetime: 80.0", () => {
-    expect(getWeeksLeft(now(), 80.0)).toStrictEqual(["4174", "285714"]);
+  test("expectedLifetime: 80.5", () => {
+    expect(getWeeksLeft(now(), 80.5)).toStrictEqual(["4200", "285714"]);
   });
 });
