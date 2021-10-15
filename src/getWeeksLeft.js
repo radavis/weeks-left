@@ -2,6 +2,8 @@ const DAYS_PER_YEAR = 365.25;
 const MILLISECONDS_PER_WEEK = 604_800_000; // 1000 * 60 * 60 * 24 * 7
 const SIGNIFICANT_DIGITS = 6;
 
+const now = () => new Date();
+
 /**
  * @description Calculates the number of weeks a person has left on Earth.
  *
@@ -14,17 +16,11 @@ const SIGNIFICANT_DIGITS = 6;
  *   getWeeksLeft((new Date()).toISOString(), 76.7) => ["4002", "000000"]
  */
 export function getWeeksLeft(birthdate, expectedLifetimeInYears) {
-  // add days to date
-  // https://github.com/you-dont-need/You-Dont-Need-Momentjs#add
   let endDate = new Date(birthdate);
   let expectedLifetimeInDays = expectedLifetimeInYears * DAYS_PER_YEAR;
   endDate.setDate(endDate.getDate() + expectedLifetimeInDays);
 
-  // compute difference between dates
-  // https://github.com/you-dont-need/You-Dont-Need-Momentjs#difference
-  let now = new Date();
-  let lifeLeftInMilliSeconds = endDate - now;
-
+  let lifeLeftInMilliSeconds = endDate - now();
   let wholeWeeks = Math.floor(lifeLeftInMilliSeconds / MILLISECONDS_PER_WEEK);
   let remainderMilliSeconds = lifeLeftInMilliSeconds % MILLISECONDS_PER_WEEK;
   let fractionalWeeks =
